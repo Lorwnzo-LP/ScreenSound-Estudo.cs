@@ -1,17 +1,25 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "Roxana";
-musica1.Artista = "The Police";
-musica1.Duracao = 273;
-musica1.Disponivel  = true;
+﻿Album albumGorillaz = new Album("Demon Days");
+albumGorillaz.genero = new Genero { Nome = "Rock alternativo" };
+Banda gorillaz = new Banda("Gorillaz");
 
-Musica musica2 = new Musica();
-musica2.Nome = "Vertigo";
-musica2.Artista = "U2";
-musica2.Duracao = 300;
-musica2.Disponivel = false;
+gorillaz.AdicionarAlbum(albumGorillaz);
+gorillaz.ExibirDiscografia();
+
+Musica musica1 = new Musica(gorillaz, "Dare")
+{
+    Duracao = 240,
+    Disponivel = true,
+};
+
+Musica musica2 = new Musica(gorillaz, "White Light")
+{
+    Duracao = 240,
+    Disponivel = false,
+};
 
 
+albumGorillaz.AdicionarMusica(musica1);
+albumGorillaz.AdicionarMusica(musica2);
 
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
+albumGorillaz.ExibirInformacoesCompletas();
 
