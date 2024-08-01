@@ -28,7 +28,7 @@
         {
             Console.WriteLine($"Música: {musica.Nome} ////// duração: {musica.Duracao}");
         }
-        Console.WriteLine("\n");
+
     }
 
     public void ExibirInformacoesCompletas()
@@ -36,7 +36,7 @@
         ExibirDetalhesDoAlbum();
         Console.WriteLine("----------------------------------------------");
         ExibirMusicasDoAlbum();
-        Console.Write("\nDigite qualquer tecla para terminar");
-        Console.ReadKey();
+        Console.WriteLine("\n");
+
     }
 }
